@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Animais</title>
+</head>
+<body>
+    <h1>Lista de Animais</h1>
+    <div id="animal-list"></div>
+
+    <script>
+        
+        var dadosAnimais = [
+            { especie: "Cachorro", cor: "Marrom", idade: 3 },
+            { especie: "Gato", cor: "Preto", idade: 2 },
+            { especie: "Coelho", cor: "Branco", idade: 1 }
+        ];
+
+        
+        function exibirDadosAnimais() {
+            var animalListDiv = document.getElementById("animal-list");
+            var html = "<ul>";
+
+            for (var i = 0; i < dadosAnimais.length; i++) {
+                var animal = dadosAnimais[i];
+                html += "<li>Espécie: " + animal.especie + ", Cor: " + animal.cor + ", Idade: " + animal.idade + " anos</li>";
+            }
+
+            html += "</ul>";
+            animalListDiv.innerHTML = html;
+        }
+
+       
+        exibirDadosAnimais();
+    </script>
+</body>
+</html>

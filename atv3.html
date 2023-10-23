@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Jogadores de Futebol</title>
+</head>
+<body>
+    <h1>Lista de Jogadores de Futebol</h1>
+    <div id="jogadores-list"></div>
+
+    <script>
+
+        var dadosJogadores = [
+            { nome: "Cristiano Ronaldo", idade: 36, time: "al nassr", posicao: "Atacante" },
+            { nome: "Lionel Messi", idade: 34, time: "Inter Miame", posicao: "Meio-campo" },
+            { nome: "Neymar Jr.", idade: 29, time: "al hilal", posicao: "Atacante" }
+        ];
+
+        
+        function exibirDadosJogadores() {
+            var jogadoresListDiv = document.getElementById("jogadores-list");
+            var html = "<ul>";
+
+            for (var i = 0; i < dadosJogadores.length; i++) {
+                var jogador = dadosJogadores[i];
+                html += "<li>Nome: " + jogador.nome + ", Idade: " + jogador.idade + " anos, Time: " + jogador.time + ", Posição: " + jogador.posicao + "</li>";
+            }
+
+            html += "</ul>";
+            jogadoresListDiv.innerHTML = html;
+        }
+
+       
+        exibirDadosJogadores();
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personagem de One Piece</title>
+</head>
+<body>
+    <h1>Dados do Personagem de One Piece</h1>
+    <div id="personagem-info"></div>
+
+    <script>
+        // Dados do personagem em formato JSON
+        var dadosPersonagem = {
+            nome: "Monkey D. Luffy",
+            recompensa: "1.500.000.000 Berries",
+            tripulacao: "Piratas do Chapéu de Palha",
+            fruta: "Gomu Gomu no Mi"
+        };
+
+        // Função para exibir os dados do personagem na página
+        function exibirDadosPersonagem() {
+            var personagemInfoDiv = document.getElementById("personagem-info");
+            var html = "<ul>";
+            html += "<li>Nome: " + dadosPersonagem.nome + "</li>";
+            html += "<li>Recompensa: " + dadosPersonagem.recompensa + "</li>";
+            html += "<li>Tripulação: " + dadosPersonagem.tripulacao + "</li>";
+            html += "<li>Fruta do Diabo: " + dadosPersonagem.fruta + "</li>";
+            html += "</ul>";
+            personagemInfoDiv.innerHTML = html;
+        }
+
+        // Chamar a função para exibir os dados
+        exibirDadosPersonagem();
+    </script>
+</body>
+</html>
